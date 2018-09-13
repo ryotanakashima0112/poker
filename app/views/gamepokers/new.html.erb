@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-xs-offset-3 col-xs-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">Check a Poker Hand</div>
+      <div class="panel-body">
+        <%= form_for(@gamepoker, url: gamepokers_judge_path, html: {method: "get"}) do |f| %>
+          <div class="form-group">
+            <%= f.label :hand %><br />
+            <%= f.text_field :hand, autofocus: true, autocomplete: "off", placeholder: "S1 D1 H2 H4 C9", class: 'form-control' %>
+          </div>
+          <div class="actions">
+            <%= f.submit "Check" %>
+          </div>
+        <% end %>
+
+        <div class="text-center">
+          <% if @yaku %>
+            <%= @yaku %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

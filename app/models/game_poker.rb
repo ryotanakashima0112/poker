@@ -1,0 +1,2 @@
+class GamePoker < ApplicationRecord
+end
