@@ -1,0 +1,1 @@
+#require "#{Rails.root}/apis/api/ver1/gamepoker.rb"

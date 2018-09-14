@@ -3,10 +3,10 @@
     <div class="panel panel-default">
       <div class="panel-heading">Check a Poker Hand</div>
       <div class="panel-body">
-        <%= form_for(@gamepoker, url: gamepokers_judge_path, html: {method: "get"}) do |f| %>
+        <%= form_for(@gamepoker, url: api_v1_gamepokers_judge_path, html: {method: "get"}) do |f| %>
           <div class="form-group">
-            <%= f.label :hand %><br />
-            <%= f.text_field :hand, autofocus: true, autocomplete: "off", placeholder: "S1 D1 H2 H4 C9", class: 'form-control' %>
+            <%= f.label :card %><br />
+            <%= f.text_field :card, autofocus: true, autocomplete: "off", placeholder: "S1 D1 H2 H4 C9", class: 'form-control' %>
           </div>
           <div class="actions">
             <%= f.submit "Check" %>
